@@ -1,0 +1,32 @@
+>>> import os
+>>> import time
+>>> import selenium
+>>> from selenium import webdriver
+>>> from selenium.webdriver.common.by import By
+>>> username=(input("enter the username of instagram id"))
+>>> password=(input("enter the password:"))
+>>> driver=webdriver.chrome()
+Traceback (most recent call last):
+  File "<python-input-7>", line 1, in <module>
+    driver=webdriver.chrome()
+TypeError: 'module' object is not callable
+>>> driver=webdriver.Chrome()
+
+DevTools listening on ws://127.0.0.1:54036/devtools/browser/ad86ff27-1ad5-4d49-8cef-bfce1a26eb16
+>>> WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1750676422.863723    8672 voice_transcription.cc:58] Registering VoiceTranscriptionCapability
+Created TensorFlow Lite XNNPACK delegate for CPU.
+Attempting to use a delegate that only supports static-sized tensors with a graph that has dynamic-sized tensors (tensor#-1 is a dynamic-sized tensor).
+
+>>> driver.get("https://www.instagram.com/accounts/login/?hl=en")
+>>> time.sleep(5)
+>>> driver.find_element(By.NAME,"username)send_keys"username"[8056:4624:0623/163320.213:ERROR:services\on_device_model\public\cpp\service_client.cc:36] Unexpected on_device_model service disconnect: The device's GPU is not supported.
+>>> driver.find_element(By.NAME,"username").send_keys(username)
+>>> driver.find_element(By.NAME,"password").send_keys(password)
+>>> driver.find_element(By.XPATH,"//button[@type='submit']").click()
+>>> print("you are succefully logged in")
+you are succefully logged in
+>>>
+
+
+
